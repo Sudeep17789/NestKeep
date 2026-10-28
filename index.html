@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NestKeep | Hostel & PG Management</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🏠 NestKeep</h1>
+        <p>Hostel & PG Management System</p>
+    </header>
+
+    <main>
+
+        <section class="welcome">
+            <h2>Welcome to NestKeep!</h2>
+            <p>
+                Manage your hostel, residents, rent, and complaints
+                in one place.
+            </p>
+        </section>
+
+        <!-- Dashboard -->
+        <section class="dashboard">
+
+            <div class="card">
+                <h3>Total Rooms</h3>
+                <p id="totalRooms">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Residents</h3>
+                <p id="totalResidents">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Pending Rent</h3>
+                <p id="pendingRent">₹0</p>
+            </div>
+
+            <div class="card">
+                <h3>Open Complaints</h3>
+                <p id="openComplaints">0</p>
+            </div>
+
+        </section>
+
+        <!-- Room Management -->
+        <section class="rooms">
+
+            <h2>Room Management</h2>
+
+            <form id="roomForm">
+
+                <input
+                    type="text"
+                    id="roomNumber"
+                    placeholder="Enter room number"
+                    maxlength="20"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="bedCapacity"
+                    placeholder="Number of beds"
+                    min="1"
+                    max="100"
+                    step="1"
+                    required
+                >
+
+                <button type="submit">+ Add Room</button>
+                 </form>
+
+            <h3 class="list-heading">Registered Rooms</h3>
+
+            <div id="roomList"></div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 NestKeep | Hostel Management Made Simple</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
